@@ -1,0 +1,94 @@
+# ==========================================
+# SYSTEM
+# ==========================================
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# ==========================================
+# IDE / EDYTORY
+# ==========================================
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/launch.json
+!.vscode/tasks.json
+
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.rsuser
+
+# ==========================================
+# .NET / C#
+# ==========================================
+**/bin/
+**/obj/
+**/out/
+
+# Pliki tymczasowe i cache .NET
+**/*.cache
+**/*.tmp
+
+# Visual Studio
+.vs/
+*.pdb
+*.ilk
+*.meta
+
+# Publikacja i artefakty kompilacji
+**/publish/
+**/TestResults/
+**/artifacts/
+
+# ==========================================
+# REACT / VITE / TYPESCRIPT
+# ==========================================
+
+# Zależności npm
+**/node_modules/
+
+# Wyniki kompilacji
+**/dist/
+**/build/
+**/coverage/
+
+# Cache narzędzi
+**/.vite/
+**/.eslintcache
+**/.tsbuildinfo
+**/*.tsbuildinfo
+
+# Logi npm / Node
+**/npm-debug.log*
+**/yarn-debug.log*
+**/pnpm-debug.log*
+**/lerna-debug.log*
+**/debug.log*
+
+# Pliki środowiskowe z sekretami
+**/.env
+**/.env.*
+!**/.env.example
+!**/.env.sample
+!**/.env.template
+
+# ==========================================
+# NARZĘDZIA I CACHE
+# ==========================================
+**/.sass-cache/
+**/.parcel-cache/
+**/.turbo/
+**/.next/
+**/.nuxt/
+
+# ==========================================
+# PLIKI SYSTEMOWE / BACKUP
+# ==========================================
+**/*.bak
+**/*.old
+**/*~
+**/*.swp
+**/*.swo

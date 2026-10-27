@@ -1,0 +1,6 @@
+@ProjektMagisterski_HostAddress = http://localhost:5108
+
+GET {{ProjektMagisterski_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

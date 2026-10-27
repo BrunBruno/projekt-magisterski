@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="D:/Studia/Magisterskie/projekt-magisterski/projekt-magisterski-backend/ProjektMagisterski.Application/ProjektMagisterski.Application.csproj" Id="10a54707-f682-4da1-a988-0a739b91aebc" />
+  <Project Path="D:/Studia/Magisterskie/projekt-magisterski/projekt-magisterski-backend/ProjektMagisterski.Core/ProjektMagisterski.Core.csproj" Id="d330b25a-5f33-43f9-90cf-5c048b2eef58" />
+  <Project Path="D:/Studia/Magisterskie/projekt-magisterski/projekt-magisterski-backend/ProjektMagisterski.Infrastructure/ProjektMagisterski.Infrastructure.csproj" Id="5622d016-bf4d-4a5d-8365-79fda695aecb" />
+  <Project Path="D:/Studia/Magisterskie/projekt-magisterski/projekt-magisterski-backend/ProjektMagisterski.Shared/ProjektMagisterski.Shared.csproj" Id="661e977e-7ee4-46b0-bea7-8ee4e8f1a1dd" />
+  <Project Path="D:/Studia/Magisterskie/projekt-magisterski/projekt-magisterski-backend/ProjektMagisterski/ProjektMagisterski.Api.csproj" />
+</Solution>
