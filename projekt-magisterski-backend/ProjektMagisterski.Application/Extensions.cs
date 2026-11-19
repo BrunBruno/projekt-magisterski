@@ -10,6 +10,6 @@ public static class Extensions
     {
         services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
 
-        return services;
+		return services;
     }
 }

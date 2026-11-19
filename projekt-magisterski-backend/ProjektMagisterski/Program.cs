@@ -1,5 +1,8 @@
+using ProjektMagisterski.Api.Hubs;
 using ProjektMagisterski.Application;
+using ProjektMagisterski.Application.Services;
 using ProjektMagisterski.Infrastructure;
+using ProjektMagisterski.Infrastructure.Services;
 using ProjektMagisterski.Shared;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -18,6 +21,8 @@ builder.Services.AddSwaggerGen(options => {
 
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
+
+builder.Services.AddSingleton<ISimulationNotifier, SignalRSimulationNotifier>();
 
 var app = builder.Build();
 
@@ -38,6 +43,8 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.MapHub<ApplicationHub>("/hubs/simulation");
 
 app.Run();
 

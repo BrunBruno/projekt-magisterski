@@ -9,12 +9,12 @@ namespace ProjektMagisterski.Api.Hubs;
 [SignalRHub]
 public class ApplicationHub : Hub<IApplicationHub>
 {
-    private readonly IMediator _mediator;
-    private readonly IMapper _mapper;
+    //private readonly IMediator _mediator;
+    //private readonly IMapper _mapper;
 
-    public ApplicationHub(IMediator mediator, IMapper mapper)
-    {
-        _mediator = mediator;
-        _mapper = mapper;
-    }
+    //public ApplicationHub(IMediator mediator, IMapper mapper)
+    //{
+    //    _mediator = mediator;
+    //    _mapper = mapper;
+    //}
 }

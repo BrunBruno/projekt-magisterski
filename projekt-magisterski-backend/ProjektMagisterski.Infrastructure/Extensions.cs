@@ -2,9 +2,11 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using ProjektMagisterski.Application.Repositories;
+using ProjektMagisterski.Application.Services;
 using ProjektMagisterski.Infrastructure.Contexts;
 using ProjektMagisterski.Infrastructure.Options;
 using ProjektMagisterski.Infrastructure.Repositories;
+using ProjektMagisterski.Infrastructure.Workers;
 using ProjektMagisterski.Shared.Options;
 
 namespace ProjektMagisterski.Infrastructure;
@@ -17,12 +19,14 @@ public static class Extensions {
 
 		services.AddPostgres(configuration);
 		services.AddRepositories();
+		services.AddSimulationEngine();
 
 		services.AddCors(options => {
 			options.AddPolicy("FrontEndClient", builder => {
-				builder.AllowAnyMethod()
+				builder.WithOrigins("http://localhost:5173", "http://localhost:3000") 
+					.AllowAnyMethod()
 					.AllowAnyHeader()
-					.AllowAnyOrigin();
+					.AllowCredentials();
 			});
 		});
 
@@ -63,4 +67,12 @@ public static class Extensions {
 
 		return services;
 	}
+	public static IServiceCollection AddSimulationEngine(
+		this IServiceCollection services) {
+		services.AddSingleton<ISimulationQueue, InMemorySimulationQueue>();
+		services.AddHostedService<SimulationWorker>();
+
+		return services;
+	}
+
 }
